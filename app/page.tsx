@@ -1,0 +1,301 @@
+import Link from "next/link"
+import Image from "next/image"
+import { ArrowRight, Mail, Linkedin, Instagram, Figma } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { ProjectCard } from "@/components/project-card"
+import { ServiceCard } from "@/components/service-card"
+import { ContactForm } from "@/components/contact-form"
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-white">
+      <main className="pt-16">
+        {/* Hero Section */}
+        <section className="py-20 md:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <div className="space-y-4">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+                  Visual Designer Creating Impactful Digital Experiences
+                </h1>
+                <p className="max-w-[600px] text-gray-500 md:text-xl">
+                  Multidisciplinary designer specializing in UI/UX, brand identity, and graphic design with
+                  international experience across industries.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button asChild size="lg">
+                    <a href="#work">
+                      View My Work <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild>
+                    <a href="#contact">Get in Touch</a>
+                  </Button>
+                </div>
+              </div>
+              <div className="relative aspect-video overflow-hidden rounded-xl">
+                <Image
+                  src="/placeholder.svg?height=720&width=1280"
+                  alt="Design Showcase"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Projects */}
+        <section id="work" className="py-20 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tighter mb-4">Selected Work</h2>
+                <p className="text-gray-500 max-w-[600px]">
+                  A collection of projects showcasing my expertise in UI/UX design, brand identity, and graphic design.
+                </p>
+              </div>
+              <div className="mt-4 md:mt-0">
+                <Button variant="outline" asChild>
+                  <Link href="/projects">View All Projects</Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <ProjectCard
+                title="Fount Energy"
+                category="UI/UX Design"
+                imageUrl="/images/fount.png"
+                link="/project/fount-energy"
+                isInternal={true}
+              />
+              <ProjectCard
+                title="MtSignals"
+                category="Co-Founder + UI/UX Design"
+                imageUrl="/images/mtsignals.png"
+                link="/project/mt-signals"
+                isInternal={true}
+              />
+              <ProjectCard
+                title="Mimou Bikini"
+                category="Brand Identity + Shopify Store"
+                imageUrl="/images/mimou.png"
+                link="/project/mimou-bikini"
+                isInternal={true}
+              />
+              <ProjectCard
+                title="CXG"
+                category="Graphic Design Services"
+                imageUrl="/images/cxg.png"
+                link="/project/cxg"
+                isInternal={true}
+              />
+              <ProjectCard
+                title="Goose Valley VC"
+                category="UI Design"
+                imageUrl="/images/goose-valley.png"
+                link="/project/goose-valley"
+                isInternal={true}
+              />
+              <ProjectCard
+                title="Book Layout Design"
+                category="Print Design"
+                imageUrl="/placeholder.svg?height=600&width=800"
+                link="/project/book-layout"
+                isInternal={true}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="py-20">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter mb-4">Services</h2>
+            <p className="text-gray-500 max-w-[600px] mb-12">
+              Comprehensive design solutions tailored to elevate your brand and digital presence.
+            </p>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <ServiceCard
+                title="UI/UX Design"
+                description="Creating intuitive, engaging user interfaces and experiences for web and mobile applications."
+                icon="layout"
+              />
+              <ServiceCard
+                title="Brand Identity"
+                description="Developing cohesive visual identities that communicate your brand's values and vision."
+                icon="palette"
+              />
+              <ServiceCard
+                title="Graphic Design"
+                description="Crafting visually compelling designs for print and digital media that capture attention."
+                icon="pen-tool"
+              />
+              <ServiceCard
+                title="Content Creation"
+                description="Producing engaging visual content for social media, marketing, and advertising campaigns."
+                icon="image"
+              />
+            </div>
+
+            <div className="mt-10 text-center">
+              <Button asChild size="lg">
+                <Link href="/services">
+                  View All Services <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-20 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div className="relative aspect-square overflow-hidden rounded-xl">
+                <Image
+                  src="/placeholder.svg?height=800&width=800"
+                  alt="Hassan Fakhreddine"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-6">
+                <h2 className="text-3xl font-bold tracking-tighter">About Me</h2>
+                <p className="text-gray-500">
+                  I'm Hassan Fakhreddine, a multidisciplinary Visual and Graphics Designer with international experience
+                  across various industries. My passion lies in creating meaningful visual experiences that solve
+                  problems and delight users.
+                </p>
+                <p className="text-gray-500">
+                  With expertise in UI/UX Design, Brand Identity, Graphic Design, and Content Creation, I've had the
+                  privilege of working with startups, established businesses, and creative agencies to bring their
+                  visions to life.
+                </p>
+                <p className="text-gray-500">
+                  My approach combines strategic thinking with creative execution, ensuring that every design not only
+                  looks beautiful but also serves its intended purpose effectively.
+                </p>
+                <div className="pt-4">
+                  <Button variant="outline" asChild>
+                    <Link href="/about">
+                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Logos */}
+        <section className="py-20">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">Trusted By</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
+              <Image
+                src="/placeholder.svg?height=80&width=160"
+                alt="Client Logo"
+                width={160}
+                height={80}
+                className="h-12 w-auto"
+              />
+              <Image
+                src="/placeholder.svg?height=80&width=160"
+                alt="Client Logo"
+                width={160}
+                height={80}
+                className="h-12 w-auto"
+              />
+              <Image
+                src="/placeholder.svg?height=80&width=160"
+                alt="Client Logo"
+                width={160}
+                height={80}
+                className="h-12 w-auto"
+              />
+              <Image
+                src="/placeholder.svg?height=80&width=160"
+                alt="Client Logo"
+                width={160}
+                height={80}
+                className="h-12 w-auto"
+              />
+              <Image
+                src="/placeholder.svg?height=80&width=160"
+                alt="Client Logo"
+                width={160}
+                height={80}
+                className="h-12 w-auto"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20 bg-black text-white">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-bold tracking-tighter">Let's Work Together</h2>
+                <p className="text-gray-400 max-w-[500px]">
+                  Have a project in mind or want to discuss potential collaborations? I'd love to hear from you.
+                </p>
+                <div className="space-y-4 pt-4">
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-5 w-5" />
+                    <a href="mailto:contact@hassanfakhreddine.com" className="hover:underline">
+                      contact@hassanfakhreddine.com
+                    </a>
+                  </div>
+                  <div className="flex gap-4">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full border-white/20 hover:bg-white/10"
+                      asChild
+                    >
+                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <Linkedin className="h-5 w-5" />
+                        <span className="sr-only">LinkedIn</span>
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full border-white/20 hover:bg-white/10"
+                      asChild
+                    >
+                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <Instagram className="h-5 w-5" />
+                        <span className="sr-only">Instagram</span>
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full border-white/20 hover:bg-white/10"
+                      asChild
+                    >
+                      <a href="https://figma.com" target="_blank" rel="noopener noreferrer" aria-label="Figma">
+                        <Figma className="h-5 w-5" />
+                        <span className="sr-only">Figma</span>
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <ContactForm />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  )
+}
