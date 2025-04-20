@@ -51,15 +51,15 @@ export default function AboutPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="font-medium">Experience</h3>
-                <p className="text-gray-500">10+ Years in Design</p>
+                <p className="text-gray-500">6+ Years in Design</p>
               </div>
               <div className="space-y-2">
                 <h3 className="font-medium">Education</h3>
-                <p className="text-gray-500">BFA in Graphic Design</p>
+                <p className="text-gray-500">BA in Graphic Design, AUST</p>
               </div>
               <div className="space-y-2">
                 <h3 className="font-medium">Languages</h3>
-                <p className="text-gray-500">English, Arabic</p>
+                <p className="text-gray-500">English, French & Arabic</p>
               </div>
             </div>
 
@@ -167,8 +167,8 @@ export default function AboutPage() {
                     <GraduationCap className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Bachelor of Fine Arts in Graphic Design</h3>
-                    <p className="text-sm text-gray-500">Lebanese American University • 2010 - 2014</p>
+                    <h3 className="font-medium">Bachelor of Arts - BA, Graphic Design</h3>
+                    <p className="text-sm text-gray-500">American University of Science & Technology • 2015 - 2019</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -177,7 +177,16 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">UI/UX Design Certification</h3>
-                    <p className="text-sm text-gray-500">Interaction Design Foundation • 2016</p>
+                    <p className="text-sm text-gray-500">Interaction Design Foundation • 2020</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                    <Award className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">AI for Design Certification</h3>
+                    <p className="text-sm text-gray-500">Design+AI Academy • 2023</p>
                   </div>
                 </div>
               </div>
@@ -198,14 +207,53 @@ export default function AboutPage() {
               <CardContent className="p-6">
                 <div className="space-y-4">
                   <p className="italic text-gray-600">
-                    "Hassan delivered a design that perfectly balances functionality and aesthetics. Our users love the
-                    new interface, and we've seen a significant improvement in engagement metrics."
+                    "Hassan has worked with me on a number of design projects for my companies and venture funds in
+                    Norway and Sweden. He has a great eye for detail and a creative flair, making him the ideal designer
+                    for corporate and technology based assignments. He delivers on time and is very thorough in his
+                    preparation and mindful in his communication."
                   </p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 rounded-full bg-gray-200 mr-3"></div>
                     <div>
-                      <p className="font-medium">Sarah Johnson</p>
-                      <p className="text-sm text-gray-500">Product Manager, Fount Energy</p>
+                      <p className="font-medium">Richard L Garnier</p>
+                      <p className="text-sm text-gray-500">
+                        Managing Partner, Capital Horizon & General Partner, GV Ventures
+                      </p>
+                      <a
+                        href="https://www.linkedin.com/in/richard-garnier-1151723/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-600 hover:underline"
+                      >
+                        LinkedIn Profile
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-sm">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <p className="italic text-gray-600">
+                    "I've worked with many designers, but Hassan stands out. He combines a deep understanding of UI/UX
+                    principles with a sharp sense for brand identity, which makes his work not only visually polished
+                    but strategically aligned. He's professional, collaborative, and brings real clarity to complex
+                    design challenges."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 rounded-full bg-gray-200 mr-3"></div>
+                    <div>
+                      <p className="font-medium">Houssam Mehdi</p>
+                      <p className="text-sm text-gray-500">Chief Technology Officer, Fount Energy</p>
+                      <a
+                        href="https://www.linkedin.com/in/houssam-mehdi-831048161/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-600 hover:underline"
+                      >
+                        LinkedIn Profile
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -221,25 +269,8 @@ export default function AboutPage() {
                   <div className="flex items-center">
                     <div className="w-10 h-10 rounded-full bg-gray-200 mr-3"></div>
                     <div>
-                      <p className="font-medium">David Chen</p>
-                      <p className="text-sm text-gray-500">CEO, Mimou Bikini</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-sm">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <p className="italic text-gray-600">
-                    "Hassan's design work was instrumental in our successful launch. His ability to translate complex
-                    requirements into intuitive interfaces gave us a significant competitive advantage."
-                  </p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-gray-200 mr-3"></div>
-                    <div>
-                      <p className="font-medium">Michael Chen</p>
-                      <p className="text-sm text-gray-500">Co-Founder, MtSignals</p>
+                      <p className="font-medium">Diana</p>
+                      <p className="text-sm text-gray-500">Founder, Mimou Bikini</p>
                     </div>
                   </div>
                 </div>

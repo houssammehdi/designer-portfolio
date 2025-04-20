@@ -4,6 +4,7 @@ import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent } from "@/components/ui/card"
+import { SocialLinks } from "@/components/social-links"
 
 export default function ContactPage() {
   return (
@@ -42,8 +43,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Email</h3>
-                      <a href="mailto:contact@hassanfakhreddine.com" className="text-gray-600 hover:text-black">
-                        contact@hassanfakhreddine.com
+                      <a href="mailto:Hassanfakhreddine.hf@gmail.com" className="text-gray-600 hover:text-black">
+                        Hassanfakhreddine.hf@gmail.com
                       </a>
                     </div>
                   </div>
@@ -80,99 +81,7 @@ export default function ContactPage() {
 
               <div className="mt-8">
                 <h3 className="font-medium mb-4">Follow Me</h3>
-                <div className="flex gap-4">
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
-                  >
-                    <span className="sr-only">LinkedIn</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-linkedin"
-                    >
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                      <rect width="4" height="12" x="2" y="9" />
-                      <circle cx="4" cy="4" r="2" />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
-                  >
-                    <span className="sr-only">Instagram</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-instagram"
-                    >
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
-                  >
-                    <span className="sr-only">Behance</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-figma"
-                    >
-                      <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-                      <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
-                      <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
-                      <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
-                      <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
-                  >
-                    <span className="sr-only">Dribbble</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-dribbble"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
-                      <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
-                      <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
-                    </svg>
-                  </a>
-                </div>
+                <SocialLinks variant="footer" />
               </div>
             </div>
           </div>

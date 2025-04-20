@@ -30,28 +30,28 @@ export default function ProjectsPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <ProjectCard
             title="Fount Energy"
-            category="UI/UX Design"
+            category="Brand Identity + UI/UX Design"
             imageUrl="/images/fount.png"
             link="/project/fount-energy"
             isInternal={true}
           />
           <ProjectCard
-            title="MtSignals"
-            category="Co-Founder + UI/UX Design"
-            imageUrl="/images/mtsignals.png"
-            link="/project/mt-signals"
+            title="Momentum Trading"
+            category="UI/UX Design"
+            imageUrl="/images/momentum-trading.png"
+            link="/project/momentum-trading"
             isInternal={true}
           />
           <ProjectCard
             title="Mimou Bikini"
-            category="Brand Identity + Shopify Store"
+            category="Brand Identity + Photography"
             imageUrl="/images/mimou.png"
             link="/project/mimou-bikini"
             isInternal={true}
           />
           <ProjectCard
             title="CXG"
-            category="Graphic Design Services"
+            category="Freelance Graphic Design"
             imageUrl="/images/cxg.png"
             link="/project/cxg"
             isInternal={true}

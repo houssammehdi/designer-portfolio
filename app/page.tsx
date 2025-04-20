@@ -1,11 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Mail, Linkedin, Instagram, Figma } from "lucide-react"
+import { ArrowRight, Mail } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { ProjectCard } from "@/components/project-card"
 import { ServiceCard } from "@/components/service-card"
 import { ContactForm } from "@/components/contact-form"
+import { SocialLinks } from "@/components/social-links"
+import { VideoHero } from "@/components/video-hero"
 
 export default function Home() {
   return (
@@ -34,15 +36,7 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-xl">
-                <Image
-                  src="/placeholder.svg?height=720&width=1280"
-                  alt="Design Showcase"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+              <VideoHero />
             </div>
           </div>
         </section>
@@ -67,28 +61,28 @@ export default function Home() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <ProjectCard
                 title="Fount Energy"
-                category="UI/UX Design"
+                category="Brand Identity + UI/UX Design"
                 imageUrl="/images/fount.png"
                 link="/project/fount-energy"
                 isInternal={true}
               />
               <ProjectCard
-                title="MtSignals"
-                category="Co-Founder + UI/UX Design"
-                imageUrl="/images/mtsignals.png"
-                link="/project/mt-signals"
+                title="Momentum Trading"
+                category="UI/UX Design"
+                imageUrl="/images/momentum-trading.png"
+                link="/project/momentum-trading"
                 isInternal={true}
               />
               <ProjectCard
                 title="Mimou Bikini"
-                category="Brand Identity + Shopify Store"
+                category="Brand Identity + Photography"
                 imageUrl="/images/mimou.png"
                 link="/project/mimou-bikini"
                 isInternal={true}
               />
               <ProjectCard
                 title="CXG"
-                category="Graphic Design Services"
+                category="Freelance Graphic Design"
                 imageUrl="/images/cxg.png"
                 link="/project/cxg"
                 isInternal={true}
@@ -103,7 +97,7 @@ export default function Home() {
               <ProjectCard
                 title="Book Layout Design"
                 category="Print Design"
-                imageUrl="/placeholder.svg?height=600&width=800"
+                imageUrl="/images/book - 2.JPG"
                 link="/project/book-layout"
                 isInternal={true}
               />
@@ -158,7 +152,7 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="relative aspect-square overflow-hidden rounded-xl">
                 <Image
-                  src="/placeholder.svg?height=800&width=800"
+                  src="/images/hassan-art.jpg"
                   alt="Hassan Fakhreddine"
                   fill
                   className="object-cover"
@@ -192,50 +186,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Client Logos */}
-        <section className="py-20">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">Trusted By</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
-              <Image
-                src="/placeholder.svg?height=80&width=160"
-                alt="Client Logo"
-                width={160}
-                height={80}
-                className="h-12 w-auto"
-              />
-              <Image
-                src="/placeholder.svg?height=80&width=160"
-                alt="Client Logo"
-                width={160}
-                height={80}
-                className="h-12 w-auto"
-              />
-              <Image
-                src="/placeholder.svg?height=80&width=160"
-                alt="Client Logo"
-                width={160}
-                height={80}
-                className="h-12 w-auto"
-              />
-              <Image
-                src="/placeholder.svg?height=80&width=160"
-                alt="Client Logo"
-                width={160}
-                height={80}
-                className="h-12 w-auto"
-              />
-              <Image
-                src="/placeholder.svg?height=80&width=160"
-                alt="Client Logo"
-                width={160}
-                height={80}
-                className="h-12 w-auto"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-black text-white">
           <div className="container px-4 md:px-6">
@@ -248,45 +198,11 @@ export default function Home() {
                 <div className="space-y-4 pt-4">
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5" />
-                    <a href="mailto:contact@hassanfakhreddine.com" className="hover:underline">
-                      contact@hassanfakhreddine.com
+                    <a href="mailto:Hassanfakhreddine.hf@gmail.com" className="hover:underline">
+                      Hassanfakhreddine.hf@gmail.com
                     </a>
                   </div>
-                  <div className="flex gap-4">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full border-white/20 hover:bg-white/10"
-                      asChild
-                    >
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <Linkedin className="h-5 w-5" />
-                        <span className="sr-only">LinkedIn</span>
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full border-white/20 hover:bg-white/10"
-                      asChild
-                    >
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <Instagram className="h-5 w-5" />
-                        <span className="sr-only">Instagram</span>
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full border-white/20 hover:bg-white/10"
-                      asChild
-                    >
-                      <a href="https://figma.com" target="_blank" rel="noopener noreferrer" aria-label="Figma">
-                        <Figma className="h-5 w-5" />
-                        <span className="sr-only">Figma</span>
-                      </a>
-                    </Button>
-                  </div>
+                  <SocialLinks />
                 </div>
               </div>
               <div>
