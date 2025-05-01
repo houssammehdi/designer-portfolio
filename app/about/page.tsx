@@ -107,8 +107,8 @@ export default function AboutPage() {
           <div className="space-y-8">
             <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
               <Image
-                src="/placeholder.svg?height=1200&width=900"
-                alt="Hassan Fakhreddine"
+                src="/images/hassan-illustration.jpeg"
+                alt="Hassan Fakhreddine Illustration"
                 fill
                 className="object-cover"
                 priority
@@ -123,7 +123,7 @@ export default function AboutPage() {
                     <Briefcase className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Co-Founder & Lead Designer</h3>
+                    <h3 className="font-medium">Lead Designer</h3>
                     <p className="text-sm text-gray-500">MtSignals • 2022 - Present</p>
                     <p className="text-sm text-gray-600 mt-2">
                       Leading the design strategy and implementation for the fintech platform, overseeing all visual
@@ -149,10 +149,11 @@ export default function AboutPage() {
                     <Briefcase className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Brand Designer</h3>
-                    <p className="text-sm text-gray-500">CXG • 2018 - 2020</p>
+                    <h3 className="font-medium">Freelance Graphic Designer</h3>
+                    <p className="text-sm text-gray-500">CXG • 2025 - Present</p>
                     <p className="text-sm text-gray-600 mt-2">
-                      Developed comprehensive brand identities and visual systems for clients across various industries.
+                      Ongoing freelance graphic design services for CXG, including social media content, animations,
+                      presentations, and interactive PDFs.
                     </p>
                   </div>
                 </div>
@@ -186,7 +187,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">AI for Design Certification</h3>
-                    <p className="text-sm text-gray-500">Design+AI Academy • 2023</p>
+                    <p className="text-sm text-gray-500">Design+AI Academy • 2024</p>
                   </div>
                 </div>
               </div>

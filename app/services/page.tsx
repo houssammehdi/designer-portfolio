@@ -31,6 +31,7 @@ export default function ServicesPage() {
             <TabsTrigger value="brand">Brand Identity</TabsTrigger>
             <TabsTrigger value="graphic">Graphic Design</TabsTrigger>
             <TabsTrigger value="content">Content Creation</TabsTrigger>
+            <TabsTrigger value="photography">Photography</TabsTrigger>
           </TabsList>
           <TabsContent value="ui-ux" className="space-y-8">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -307,6 +308,60 @@ export default function ServicesPage() {
               </div>
             </div>
           </TabsContent>
+          <TabsContent value="photography" className="space-y-8">
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div>
+                <h2 className="text-2xl font-bold mb-4">Photography</h2>
+                <p className="text-gray-600 mb-6">
+                  Professional photography services that capture the essence of your brand, products, and events with a
+                  creative and artistic approach.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1 w-5 h-5 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span>Product Photography</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1 w-5 h-5 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span>Brand Photography</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1 w-5 h-5 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span>Event Coverage</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1 w-5 h-5 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span>Lifestyle Photography</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1 w-5 h-5 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span>Photo Editing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1 w-5 h-5 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <span>Art Direction</span>
+                  </li>
+                </ul>
+                <Button asChild>
+                  <Link href="/contact">
+                    Discuss Your Project <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </TabsContent>
         </Tabs>
 
         <div className="bg-gray-50 rounded-xl p-8 md:p-12 mt-12">
@@ -323,36 +378,21 @@ export default function ServicesPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="relative aspect-square overflow-hidden rounded-lg">
+                <Image src="/images/fount.png" alt="Fount Energy Project" fill className="object-cover" />
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Project Example"
+                  src="/images/momentum-trading.png"
+                  alt="Momentum Trading Project"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Project Example"
-                  fill
-                  className="object-cover"
-                />
+                <Image src="/images/mimou.png" alt="Mimou Bikini Project" fill className="object-cover" />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Project Example"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square overflow-hidden rounded-lg">
-                <Image
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Project Example"
-                  fill
-                  className="object-cover"
-                />
+                <Image src="/images/cxg.png" alt="CXG Project" fill className="object-cover" />
               </div>
             </div>
           </div>

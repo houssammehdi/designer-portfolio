@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react"
+import { ArrowLeft, Mail, MapPin } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/contact-form"
@@ -45,21 +45,6 @@ export default function ContactPage() {
                       <h3 className="font-medium mb-1">Email</h3>
                       <a href="mailto:Hassanfakhreddine.hf@gmail.com" className="text-gray-600 hover:text-black">
                         Hassanfakhreddine.hf@gmail.com
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="border-0 shadow-sm">
-                <CardContent className="p-6">
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium mb-1">Phone</h3>
-                      <a href="tel:+1234567890" className="text-gray-600 hover:text-black">
-                        +1 (234) 567-890
                       </a>
                     </div>
                   </div>

@@ -64,10 +64,10 @@ export default function ProjectsPage() {
             isInternal={true}
           />
           <ProjectCard
-            title="Book Layout Design"
-            category="Print Design"
-            imageUrl="/placeholder.svg?height=600&width=800"
-            link="/project/book-layout"
+            title="Lovebox Booklet"
+            category="Page Layout Design"
+            imageUrl="/images/lovebox-2.jpg"
+            link="/project/lovebox-booklet"
             isInternal={true}
           />
           <ProjectCard

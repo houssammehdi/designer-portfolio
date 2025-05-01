@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { MobileMenu } from "@/components/mobile-menu"
+import { WorkDropdown } from "@/components/work-dropdown"
 
 export function Header() {
   const pathname = usePathname()
@@ -17,9 +18,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6">
           {isHomePage ? (
             <>
-              <a href="#work" className="text-sm font-medium hover:text-black/70 transition-colors">
-                Work
-              </a>
+              <WorkDropdown />
               <a href="#services" className="text-sm font-medium hover:text-black/70 transition-colors">
                 Services
               </a>
@@ -32,9 +31,7 @@ export function Header() {
             </>
           ) : (
             <>
-              <Link href="/#work" className="text-sm font-medium hover:text-black/70 transition-colors">
-                Work
-              </Link>
+              <WorkDropdown />
               <Link href="/#services" className="text-sm font-medium hover:text-black/70 transition-colors">
                 Services
               </Link>

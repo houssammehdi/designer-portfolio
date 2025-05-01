@@ -1,4 +1,4 @@
-import { Layout, Palette, PenTool, ImageIcon, Smartphone, Globe, Film, MessageSquare } from "lucide-react"
+import { Layout, Palette, PenTool, ImageIcon, Smartphone, Globe, Film, MessageSquare, Camera } from "lucide-react"
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
@@ -27,6 +27,8 @@ export function ServiceCard({ title, description, icon }: ServiceCardProps) {
         return <Film className="h-10 w-10" />
       case "message-square":
         return <MessageSquare className="h-10 w-10" />
+      case "camera":
+        return <Camera className="h-10 w-10" />
       default:
         return <Layout className="h-10 w-10" />
     }

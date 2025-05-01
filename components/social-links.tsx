@@ -1,66 +1,52 @@
-import { Linkedin, Instagram, Figma } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import type React from "react"
+import { Figma, Instagram, Linkedin } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 export function SocialLinks({ variant = "default" }: { variant?: "default" | "footer" }) {
   const isDefault = variant === "default"
 
   return (
     <div className="flex gap-4">
-      <Button
-        variant={isDefault ? "outline" : "ghost"}
-        size="icon"
-        className={
-          isDefault
-            ? "rounded-full border-white/20 hover:bg-white/10"
-            : "hover:bg-gray-100 rounded-full p-2 h-auto w-auto"
-        }
-        asChild
-      >
-        <a
-          href="https://linkedin.com/in/hassan-fakhreddine"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <Linkedin className={isDefault ? "h-5 w-5" : "h-4 w-4 text-gray-600"} />
-          <span className="sr-only">LinkedIn</span>
-        </a>
-      </Button>
-      <Button
-        variant={isDefault ? "outline" : "ghost"}
-        size="icon"
-        className={
-          isDefault
-            ? "rounded-full border-white/20 hover:bg-white/10"
-            : "hover:bg-gray-100 rounded-full p-2 h-auto w-auto"
-        }
-        asChild
-      >
-        <a
-          href="https://instagram.com/hassan.fakhreddine"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          <Instagram className={isDefault ? "h-5 w-5" : "h-4 w-4 text-gray-600"} />
-          <span className="sr-only">Instagram</span>
-        </a>
-      </Button>
-      <Button
-        variant={isDefault ? "outline" : "ghost"}
-        size="icon"
-        className={
-          isDefault
-            ? "rounded-full border-white/20 hover:bg-white/10"
-            : "hover:bg-gray-100 rounded-full p-2 h-auto w-auto"
-        }
-        asChild
-      >
-        <a href="https://figma.com/@hassanfakhreddine" target="_blank" rel="noopener noreferrer" aria-label="Figma">
-          <Figma className={isDefault ? "h-5 w-5" : "h-4 w-4 text-gray-600"} />
-          <span className="sr-only">Figma</span>
-        </a>
-      </Button>
+      <SocialLink href="https://linkedin.com/in/hassan-fakhreddine" aria-label="LinkedIn" isDefault={isDefault}>
+        <Linkedin className={isDefault ? "h-5 w-5 text-white" : "h-4 w-4 text-gray-600"} />
+      </SocialLink>
+
+      <SocialLink href="https://instagram.com/hassan.fakhreddine" aria-label="Instagram" isDefault={isDefault}>
+        <Instagram className={isDefault ? "h-5 w-5 text-white" : "h-4 w-4 text-gray-600"} />
+      </SocialLink>
+
+      <SocialLink href="https://figma.com/@hassanfakhreddine" aria-label="Figma" isDefault={isDefault}>
+        <Figma className={isDefault ? "h-5 w-5 text-white" : "h-4 w-4 text-gray-600"} />
+      </SocialLink>
     </div>
+  )
+}
+
+// Create a separate component for each social link to better control styling
+function SocialLink({
+  href,
+  children,
+  "aria-label": ariaLabel,
+  isDefault,
+}: {
+  href: string
+  children: React.ReactNode
+  "aria-label": string
+  isDefault: boolean
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+      className={cn(
+        "flex items-center justify-center rounded-full",
+        isDefault ? "w-10 h-10 border border-white/20 hover:bg-white/10" : "w-8 h-8 text-gray-600 hover:bg-gray-100",
+      )}
+    >
+      {children}
+      <span className="sr-only">{ariaLabel}</span>
+    </a>
   )
 }

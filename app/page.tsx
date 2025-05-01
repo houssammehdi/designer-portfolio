@@ -95,10 +95,10 @@ export default function Home() {
                 isInternal={true}
               />
               <ProjectCard
-                title="Book Layout Design"
-                category="Print Design"
-                imageUrl="/images/book - 2.JPG"
-                link="/project/book-layout"
+                title="Lovebox Booklet"
+                category="Page Layout Design"
+                imageUrl="/images/lovebox-2.jpg"
+                link="/project/lovebox-booklet"
                 isInternal={true}
               />
             </div>
@@ -113,7 +113,7 @@ export default function Home() {
               Comprehensive design solutions tailored to elevate your brand and digital presence.
             </p>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
               <ServiceCard
                 title="UI/UX Design"
                 description="Creating intuitive, engaging user interfaces and experiences for web and mobile applications."
@@ -134,6 +134,11 @@ export default function Home() {
                 description="Producing engaging visual content for social media, marketing, and advertising campaigns."
                 icon="image"
               />
+              <ServiceCard
+                title="Photography"
+                description="Professional photography services that capture the essence of your brand and products."
+                icon="camera"
+              />
             </div>
 
             <div className="mt-10 text-center">
@@ -152,10 +157,11 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="relative aspect-square overflow-hidden rounded-xl">
                 <Image
-                  src="/images/hassan-art.jpg"
-                  alt="Hassan Fakhreddine"
+                  src="/images/hassan-illustration.jpeg"
+                  alt="Hassan Fakhreddine Illustration"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
               <div className="space-y-6">

@@ -145,25 +145,25 @@ const getProjectData = (slug: string) => {
         role: "Managing Partner, Capital Horizon & General Partner, GV Ventures",
       },
     },
-    "book-layout": {
-      title: "Book Layout Design",
-      category: "Print Design",
-      client: "Independent Author",
+    "lovebox-booklet": {
+      title: "Lovebox Booklet",
+      category: "Page Layout Design",
+      client: "Lovebox",
       year: "2022",
       imageUrl: "/placeholder.svg?height=600&width=800",
-      description: "A comprehensive book layout design project for an independent author's non-fiction publication.",
+      description: "A comprehensive page layout design project for Lovebox's product booklet.",
       challenge:
-        "Creating a professional, engaging layout for a complex non-fiction book with various content types including text, images, charts, and sidebars.",
+        "Creating a professional, engaging layout for a product booklet with various content types including text, images, and product specifications.",
       solution:
         "I developed a clean, readable layout with a consistent typographic system that enhances readability while maintaining visual interest. Special attention was given to the hierarchy of information and the integration of visual elements.",
       results:
-        "The book received praise for its professional design and readability, contributing to its commercial success and positive reviews.",
-      services: ["Book Layout Design", "Typography", "Cover Design", "Print Preparation", "Image Editing"],
+        "The booklet received praise for its professional design and readability, contributing to its effectiveness as a marketing tool.",
+      services: ["Page Layout Design", "Typography", "Print Preparation", "Image Editing"],
       testimonial: {
         quote:
-          "Hassan's design transformed my manuscript into a professional publication. His attention to detail and understanding of typography made the complex content accessible and engaging.",
-        author: "Dr. Emily Chen",
-        role: "Author",
+          "Hassan's design transformed our product information into an engaging publication. His attention to detail and understanding of typography made the content accessible and visually appealing.",
+        author: "Sarah Johnson",
+        role: "Marketing Director, Lovebox",
       },
     },
     // Additional projects would be defined here
@@ -214,7 +214,196 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   }
 
   // Special case for CXG project
+  // For CXG project, remove the 2 image boxes and testimonial
+  // Find the section for CXG (around line 450-550)
+
+  // Replace the CXG section with this updated version:
   if (params.slug === "cxg") {
+    return (
+      <div className="min-h-screen bg-white pt-20">
+        <div className="container px-4 md:px-6 py-12">
+          <Button variant="ghost" asChild className="mb-8">
+            <Link href="/projects">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Projects
+            </Link>
+          </Button>
+
+          <div className="grid gap-12 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <h1 className="text-3xl font-bold tracking-tighter mb-4">{project.title}</h1>
+              <p className="text-gray-500 mb-8 text-lg">{project.description}</p>
+
+              <div className="relative aspect-video overflow-hidden rounded-xl mb-8">
+                <Image
+                  src={project.imageUrl || "/placeholder.svg?height=720&width=1280"}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
+            <div className="lg:col-span-1">
+              <div className="bg-gray-50 p-6 rounded-xl sticky top-24">
+                <h3 className="text-xl font-bold mb-6">Project Details</h3>
+
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm text-gray-500">Client</p>
+                    <p className="font-medium">{project.client}</p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-gray-500">Year</p>
+                    <p className="font-medium">{project.year}</p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-gray-500">Category</p>
+                    <p className="font-medium">{project.category}</p>
+                  </div>
+
+                  {project.link && (
+                    <div>
+                      <p className="text-sm text-gray-500">Website</p>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-black hover:text-gray-700 flex items-center"
+                      >
+                        Visit Site <ExternalLink className="ml-2 h-3 w-3" />
+                      </a>
+                    </div>
+                  )}
+
+                  <Separator className="my-4" />
+
+                  <div>
+                    <p className="text-sm text-gray-500 mb-2">Services</p>
+                    <ul className="space-y-1">
+                      {project.services.map((service, index) => (
+                        <li key={index} className="font-medium">
+                          {service}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Separator className="my-4" />
+
+                  <div className="pt-2">
+                    <Button asChild className="w-full">
+                      <Link href="/contact">Start a Project</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // For Momentum Trading project, update the section to remove content after the main image
+  // Find the section for Momentum Trading (around line 300-350)
+
+  // Replace the Momentum Trading section with this simplified version:
+  if (params.slug === "momentum-trading") {
+    return (
+      <div className="min-h-screen bg-white pt-20">
+        <div className="container px-4 md:px-6 py-12">
+          <Button variant="ghost" asChild className="mb-8">
+            <Link href="/projects">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Projects
+            </Link>
+          </Button>
+
+          <div className="grid gap-12 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <h1 className="text-3xl font-bold tracking-tighter mb-4">{project.title}</h1>
+              <p className="text-gray-500 mb-8 text-lg">{project.description}</p>
+
+              <div className="relative aspect-video overflow-hidden rounded-xl mb-8">
+                <Image
+                  src={project.imageUrl || "/placeholder.svg?height=720&width=1280"}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
+            <div className="lg:col-span-1">
+              <div className="bg-gray-50 p-6 rounded-xl sticky top-24">
+                <h3 className="text-xl font-bold mb-6">Project Details</h3>
+
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm text-gray-500">Client</p>
+                    <p className="font-medium">{project.client}</p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-gray-500">Year</p>
+                    <p className="font-medium">{project.year}</p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-gray-500">Category</p>
+                    <p className="font-medium">{project.category}</p>
+                  </div>
+
+                  {project.link && (
+                    <div>
+                      <p className="text-sm text-gray-500">Website</p>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-black hover:text-gray-700 flex items-center"
+                      >
+                        Visit Site <ExternalLink className="ml-2 h-3 w-3" />
+                      </a>
+                    </div>
+                  )}
+
+                  <Separator className="my-4" />
+
+                  <div>
+                    <p className="text-sm text-gray-500 mb-2">Services</p>
+                    <ul className="space-y-1">
+                      {project.services.map((service, index) => (
+                        <li key={index} className="font-medium">
+                          {service}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Separator className="my-4" />
+
+                  <div className="pt-2">
+                    <Button asChild className="w-full">
+                      <Link href="/contact">Start a Project</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // For Mimou project, update the structure
+  if (params.slug === "mimou-bikini") {
     return (
       <div className="min-h-screen bg-white pt-20">
         <div className="container px-4 md:px-6 py-12">
@@ -241,23 +430,133 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </div>
 
               <div className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="relative aspect-square overflow-hidden rounded-xl">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt={`${project.title} Example 1`}
-                      fill
-                      className="object-cover"
-                    />
+                <div>
+                  <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
+                  <p className="text-gray-600">{project.challenge}</p>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold mb-4">The Result</h2>
+                  <p className="text-gray-600">{project.solution}</p>
+                </div>
+
+                {project.testimonial && (
+                  <div className="bg-gray-50 p-8 rounded-xl">
+                    <blockquote className="text-xl italic text-gray-700 mb-4">"{project.testimonial.quote}"</blockquote>
+                    <div className="flex items-center">
+                      <div className="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                      <div>
+                        <p className="font-medium">{project.testimonial.author}</p>
+                        <p className="text-gray-500 text-sm">{project.testimonial.role}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="relative aspect-square overflow-hidden rounded-xl">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt={`${project.title} Example 2`}
-                      fill
-                      className="object-cover"
-                    />
+                )}
+              </div>
+            </div>
+
+            <div className="lg:col-span-1">
+              <div className="bg-gray-50 p-6 rounded-xl sticky top-24">
+                <h3 className="text-xl font-bold mb-6">Project Details</h3>
+
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm text-gray-500">Client</p>
+                    <p className="font-medium">{project.client}</p>
                   </div>
+
+                  <div>
+                    <p className="text-sm text-gray-500">Year</p>
+                    <p className="font-medium">{project.year}</p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-gray-500">Category</p>
+                    <p className="font-medium">{project.category}</p>
+                  </div>
+
+                  {project.link && (
+                    <div>
+                      <p className="text-sm text-gray-500">Website</p>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-black hover:text-gray-700 flex items-center"
+                      >
+                        Visit Site <ExternalLink className="ml-2 h-3 w-3" />
+                      </a>
+                    </div>
+                  )}
+
+                  <Separator className="my-4" />
+
+                  <div>
+                    <p className="text-sm text-gray-500 mb-2">Services</p>
+                    <ul className="space-y-1">
+                      {project.services.map((service, index) => (
+                        <li key={index} className="font-medium">
+                          {service}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Separator className="my-4" />
+
+                  <div className="pt-2">
+                    <Button asChild className="w-full">
+                      <Link href="/contact">Start a Project</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // For Goose Valley project, change "The Solution" to "The Result" and remove "The Result" section
+  // Find the section for Goose Valley (around line 550-650)
+
+  // Replace the Goose Valley section with this updated version:
+  if (params.slug === "goose-valley") {
+    return (
+      <div className="min-h-screen bg-white pt-20">
+        <div className="container px-4 md:px-6 py-12">
+          <Button variant="ghost" asChild className="mb-8">
+            <Link href="/projects">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Projects
+            </Link>
+          </Button>
+
+          <div className="grid gap-12 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <h1 className="text-3xl font-bold tracking-tighter mb-4">{project.title}</h1>
+              <p className="text-gray-500 mb-8 text-lg">{project.description}</p>
+
+              <div className="relative aspect-video overflow-hidden rounded-xl mb-8">
+                <Image
+                  src={project.imageUrl || "/placeholder.svg?height=720&width=1280"}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
+                  <p className="text-gray-600">{project.challenge}</p>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold mb-4">The Result</h2>
+                  <p className="text-gray-600">{project.solution}</p>
                 </div>
 
                 {project.testimonial && (
