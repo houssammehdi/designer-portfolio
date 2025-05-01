@@ -64,7 +64,7 @@ export default function SocialMediaPage() {
           <h2 className="text-2xl font-semibold mb-6">Featured Animation</h2>
           <div className="bg-gray-50 rounded-lg overflow-hidden p-6">
             <div className="max-w-3xl mx-auto">
-              <SocialMediaVideo src="/videos/social-media-animation.mp4" />
+              <SocialMediaVideo src="https://edyyifc1a03xf4de.public.blob.vercel-storage.com/WhatsApp%20Video%202025-05-01%20at%2023.07.34_840457ab-W2FT3yMyu4raK2anwFYkMW4Yu7VawY.mp4" />
               <div className="mt-4">
                 <h3 className="text-xl font-medium mb-2">Promotional Animation</h3>
                 <p className="text-gray-600">
