@@ -73,6 +73,31 @@ export default function ProjectsPage() {
           />
         </div>
 
+        <h2 className="text-2xl font-semibold mb-6">Social Media Content</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+          <ProjectCard
+            title="Queen Cell Valentine's Campaign"
+            category="Social Media Content"
+            imageUrl="/images/social-media/queen-cell-valentine-gifts.jpeg"
+            link="/projects/social-media"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="The All Americans Delivery"
+            category="Social Media Content"
+            imageUrl="/images/social-media/all-americans-delivery.jpeg"
+            link="/projects/social-media"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="Social Media Animation"
+            category="Motion Graphics"
+            imageUrl="/images/social-media/queen-cell-stay-connected.jpeg"
+            link="/projects/social-media"
+            isInternal={true}
+          />
+        </div>
+
         <h2 className="text-2xl font-semibold mb-6">Logo Design</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
           <ProjectCard

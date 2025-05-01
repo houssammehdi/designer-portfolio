@@ -38,6 +38,9 @@ export function WorkDropdown() {
               <ListItem href="/projects/page-layout" title="Page Layout Design">
                 Book, magazine, and publication design
               </ListItem>
+              <ListItem href="/projects/social-media" title="Social Media">
+                Social media content creation and campaigns
+              </ListItem>
               <ListItem href="/projects/clients" title="Clients">
                 Client projects and collaborations
               </ListItem>
