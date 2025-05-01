@@ -1,5 +1,5 @@
 import type React from "react"
-import { Figma, Instagram, Linkedin } from "lucide-react"
+import { Linkedin } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function SocialLinks({ variant = "default" }: { variant?: "default" | "footer" }) {
@@ -7,22 +7,18 @@ export function SocialLinks({ variant = "default" }: { variant?: "default" | "fo
 
   return (
     <div className="flex gap-4">
-      <SocialLink href="https://linkedin.com/in/hassan-fakhreddine" aria-label="LinkedIn" isDefault={isDefault}>
+      <SocialLink
+        href="https://www.linkedin.com/in/hassan-fakhreddine-8794b4193/"
+        aria-label="LinkedIn"
+        isDefault={isDefault}
+      >
         <Linkedin className={isDefault ? "h-5 w-5 text-white" : "h-4 w-4 text-gray-600"} />
-      </SocialLink>
-
-      <SocialLink href="https://instagram.com/hassan.fakhreddine" aria-label="Instagram" isDefault={isDefault}>
-        <Instagram className={isDefault ? "h-5 w-5 text-white" : "h-4 w-4 text-gray-600"} />
-      </SocialLink>
-
-      <SocialLink href="https://figma.com/@hassanfakhreddine" aria-label="Figma" isDefault={isDefault}>
-        <Figma className={isDefault ? "h-5 w-5 text-white" : "h-4 w-4 text-gray-600"} />
       </SocialLink>
     </div>
   )
 }
 
-// Create a separate component for each social link to better control styling
+// Component for the social link to control styling
 function SocialLink({
   href,
   children,

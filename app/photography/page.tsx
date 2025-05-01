@@ -178,7 +178,7 @@ export default function PhotographyPage() {
                   <span>Event & Campaign Photography</span>
                 </li>
               </ul>
-              <Button asChild variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild className="bg-white text-black hover:bg-white/90">
                 <Link href="/contact">Get in Touch</Link>
               </Button>
             </div>

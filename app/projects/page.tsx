@@ -27,7 +27,8 @@ export default function ProjectsPage() {
           creation.
         </p>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <h2 className="text-2xl font-semibold mb-6">UI/UX & Brand Projects</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
           <ProjectCard
             title="Fount Energy"
             category="Brand Identity + UI/UX Design"
@@ -59,7 +60,7 @@ export default function ProjectsPage() {
           <ProjectCard
             title="Goose Valley VC"
             category="UI Design"
-            imageUrl="/images/goose-valley.png"
+            imageUrl="/images/goose-valley-logo.jpeg"
             link="/project/goose-valley"
             isInternal={true}
           />
@@ -70,46 +71,82 @@ export default function ProjectsPage() {
             link="/project/lovebox-booklet"
             isInternal={true}
           />
+        </div>
+
+        <h2 className="text-2xl font-semibold mb-6">Logo Design</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
           <ProjectCard
-            title="Mobile App UI"
-            category="UI/UX Design"
-            imageUrl="/placeholder.svg?height=600&width=800"
-            link="/project/mobile-app-ui"
+            title="Jupiter"
+            category="Logo Design"
+            imageUrl="/images/jupiter-logo.jpeg"
+            link="/project/jupiter"
             isInternal={true}
           />
           <ProjectCard
-            title="Brand Guidelines"
-            category="Brand Identity"
-            imageUrl="/placeholder.svg?height=600&width=800"
-            link="/project/brand-guidelines"
+            title="Silverstein Cakes"
+            category="Logo Design"
+            imageUrl="/images/silverstein-cakes-logo.jpeg"
+            link="/project/silverstein-cakes"
             isInternal={true}
           />
           <ProjectCard
-            title="Social Media Campaign"
-            category="Content Creation"
-            imageUrl="/placeholder.svg?height=600&width=800"
-            link="/project/social-media-campaign"
+            title="PineLand"
+            category="Logo Design"
+            imageUrl="/images/pineland-logo.jpeg"
+            link="/project/pineland"
             isInternal={true}
           />
           <ProjectCard
-            title="Magazine Layout"
-            category="Print Design"
-            imageUrl="/placeholder.svg?height=600&width=800"
-            link="/project/magazine-layout"
+            title="All Star Apparel"
+            category="Logo Design"
+            imageUrl="/images/all-star-apparel-logo.jpeg"
+            link="/project/all-star-apparel"
             isInternal={true}
           />
           <ProjectCard
-            title="E-commerce Website"
-            category="UI/UX Design"
-            imageUrl="/placeholder.svg?height=600&width=800"
-            link="/project/ecommerce-website"
+            title="Amaken"
+            category="Logo Design"
+            imageUrl="/images/amaken-logo.jpeg"
+            link="/project/amaken"
             isInternal={true}
           />
           <ProjectCard
-            title="Logo Collection"
-            category="Brand Identity"
-            imageUrl="/placeholder.svg?height=600&width=800"
-            link="/project/logo-collection"
+            title="Gitar Undervisning"
+            category="Logo Design"
+            imageUrl="/images/gitar-undervisning-logo.jpeg"
+            link="/project/gitar-undervisning"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="TechRivo"
+            category="Logo Design"
+            imageUrl="/images/techrivo-logo.jpeg"
+            link="/project/techrivo"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="Sheriff Dickles"
+            category="Logo Design"
+            imageUrl="/images/sheriff-dickles-logo.jpeg"
+            link="/project/sheriff-dickles"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="TwoAeon"
+            category="Logo Design"
+            imageUrl="/images/twoaeon-logo.jpeg"
+            link="/project/twoaeon"
+            isInternal={true}
+          />
+        </div>
+
+        <h2 className="text-2xl font-semibold mb-6">Photography</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <ProjectCard
+            title="Mimou Bikini Collection"
+            category="Fashion Photography"
+            imageUrl="/images/photography/bikini-hearts-1.jpeg"
+            link="/photography"
             isInternal={true}
           />
         </div>

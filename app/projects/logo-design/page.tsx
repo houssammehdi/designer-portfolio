@@ -28,6 +28,69 @@ export default function LogoDesignProjectsPage() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <ProjectCard
+            title="Jupiter"
+            category="Logo Design"
+            imageUrl="/images/jupiter-logo.jpeg"
+            link="/project/jupiter"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="Silverstein Cakes"
+            category="Logo Design"
+            imageUrl="/images/silverstein-cakes-logo.jpeg"
+            link="/project/silverstein-cakes"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="PineLand"
+            category="Logo Design"
+            imageUrl="/images/pineland-logo.jpeg"
+            link="/project/pineland"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="All Star Apparel"
+            category="Logo Design"
+            imageUrl="/images/all-star-apparel-logo.jpeg"
+            link="/project/all-star-apparel"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="Amaken"
+            category="Arabic Logo Design"
+            imageUrl="/images/amaken-logo.jpeg"
+            link="/project/amaken"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="Gitar Undervisning"
+            category="Logo Design"
+            imageUrl="/images/gitar-undervisning-logo.jpeg"
+            link="/project/gitar-undervisning"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="TechRivo"
+            category="Logo Design"
+            imageUrl="/images/techrivo-logo.jpeg"
+            link="/project/techrivo"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="Sheriff Dickles"
+            category="Gaming Logo Design"
+            imageUrl="/images/sheriff-dickles-logo.jpeg"
+            link="/project/sheriff-dickles"
+            isInternal={true}
+          />
+          <ProjectCard
+            title="TwoAeon"
+            category="Logo Design"
+            imageUrl="/images/twoaeon-logo.jpeg"
+            link="/project/twoaeon"
+            isInternal={true}
+          />
+          <ProjectCard
             title="Mimou Bikini"
             category="Brand Identity + Photography"
             imageUrl="/images/mimou.png"

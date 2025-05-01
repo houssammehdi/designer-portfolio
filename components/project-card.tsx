@@ -12,9 +12,18 @@ interface ProjectCardProps {
   link?: string
   isInternal?: boolean
   className?: string
+  imageClassName?: string
 }
 
-export function ProjectCard({ title, category, imageUrl, link, isInternal = false, className }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  category,
+  imageUrl,
+  link,
+  isInternal = false,
+  className,
+  imageClassName,
+}: ProjectCardProps) {
   const CardWrapper = link ? (isInternal ? Link : "a") : "div"
   const wrapperProps = link
     ? isInternal
@@ -30,7 +39,7 @@ export function ProjectCard({ title, category, imageUrl, link, isInternal = fals
             src={imageUrl || "/placeholder.svg"}
             alt={title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className={cn("object-cover transition-transform duration-300 group-hover:scale-105", imageClassName)}
           />
           {link && !isInternal && (
             <div className="absolute top-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">

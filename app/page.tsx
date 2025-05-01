@@ -3,13 +3,80 @@ import Image from "next/image"
 import { ArrowRight, Mail } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { ProjectCard } from "@/components/project-card"
 import { ServiceCard } from "@/components/service-card"
 import { ContactForm } from "@/components/contact-form"
 import { SocialLinks } from "@/components/social-links"
 import { VideoHero } from "@/components/video-hero"
+import { ProjectCarousel } from "@/components/project-carousel"
 
 export default function Home() {
+  // Define projects for the carousel
+  const featuredProjects = [
+    {
+      title: "Fount Energy",
+      category: "Brand Identity + UI/UX Design",
+      imageUrl: "/images/fount.png",
+      link: "/project/fount-energy",
+      isInternal: true,
+    },
+    {
+      title: "Momentum Trading",
+      category: "UI/UX Design",
+      imageUrl: "/images/momentum-trading.png",
+      link: "/project/momentum-trading",
+      isInternal: true,
+    },
+    {
+      title: "Mimou Bikini",
+      category: "Brand Identity + Photography",
+      imageUrl: "/images/mimou.png",
+      link: "/project/mimou-bikini",
+      isInternal: true,
+    },
+    {
+      title: "CXG",
+      category: "Freelance Graphic Design",
+      imageUrl: "/images/cxg.png",
+      link: "/project/cxg",
+      isInternal: true,
+    },
+    {
+      title: "Goose Valley VC",
+      category: "UI Design",
+      imageUrl: "/images/goose-valley-logo.jpeg",
+      link: "/project/goose-valley",
+      isInternal: true,
+    },
+    {
+      title: "Lovebox Booklet",
+      category: "Page Layout Design",
+      imageUrl: "/images/lovebox-2.jpg",
+      link: "/project/lovebox-booklet",
+      isInternal: true,
+    },
+    {
+      title: "Jupiter",
+      category: "Logo Design",
+      imageUrl: "/images/jupiter-logo.jpeg",
+      link: "/project/jupiter",
+      isInternal: true,
+    },
+    {
+      title: "Silverstein Cakes",
+      category: "Logo Design",
+      imageUrl: "/images/silverstein-cakes-logo.jpeg",
+      link: "/project/silverstein-cakes",
+      isInternal: true,
+    },
+    {
+      title: "PineLand",
+      category: "Logo Design",
+      imageUrl: "/images/pineland-logo.jpeg",
+      link: "/project/pineland",
+      isInternal: true,
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       <main className="pt-16">
@@ -58,50 +125,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <ProjectCard
-                title="Fount Energy"
-                category="Brand Identity + UI/UX Design"
-                imageUrl="/images/fount.png"
-                link="/project/fount-energy"
-                isInternal={true}
-              />
-              <ProjectCard
-                title="Momentum Trading"
-                category="UI/UX Design"
-                imageUrl="/images/momentum-trading.png"
-                link="/project/momentum-trading"
-                isInternal={true}
-              />
-              <ProjectCard
-                title="Mimou Bikini"
-                category="Brand Identity + Photography"
-                imageUrl="/images/mimou.png"
-                link="/project/mimou-bikini"
-                isInternal={true}
-              />
-              <ProjectCard
-                title="CXG"
-                category="Freelance Graphic Design"
-                imageUrl="/images/cxg.png"
-                link="/project/cxg"
-                isInternal={true}
-              />
-              <ProjectCard
-                title="Goose Valley VC"
-                category="UI Design"
-                imageUrl="/images/goose-valley.png"
-                link="/project/goose-valley"
-                isInternal={true}
-              />
-              <ProjectCard
-                title="Lovebox Booklet"
-                category="Page Layout Design"
-                imageUrl="/images/lovebox-2.jpg"
-                link="/project/lovebox-booklet"
-                isInternal={true}
-              />
-            </div>
+            <ProjectCarousel projects={featuredProjects} />
           </div>
         </section>
 
