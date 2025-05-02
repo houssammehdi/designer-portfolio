@@ -77,14 +77,21 @@ export default function SocialMediaPage() {
         </div>
 
         <h2 className="text-2xl font-semibold mb-6">Social Media Posts</h2>
-        <div className="grid gap-8 md:gap-12">
+        <div className="space-y-16">
           {socialMediaItems.map((item) => (
-            <div key={item.id} className="bg-gray-50 rounded-lg overflow-hidden">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="relative h-[300px] md:h-auto">
-                  <Image src={item.imageUrl || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
+            <div key={item.id} className="bg-gray-50 rounded-lg overflow-hidden p-6">
+              <div className="flex flex-col items-center">
+                <div className="mb-6 w-full max-w-2xl">
+                  <Image
+                    src={item.imageUrl || "/placeholder.svg"}
+                    alt={item.title}
+                    width={1200}
+                    height={1200}
+                    className="w-full h-auto rounded-lg"
+                    priority
+                  />
                 </div>
-                <div className="p-6 flex flex-col justify-center">
+                <div className="w-full max-w-2xl">
                   <h2 className="text-2xl font-semibold mb-2">{item.title}</h2>
                   <p className="text-gray-600 mb-4">Client: {item.client}</p>
                   <p className="text-gray-500">{item.description}</p>

@@ -43,7 +43,7 @@ export default function JupiterProjectPage() {
             <h1 className="text-3xl font-bold tracking-tighter mb-4">{project.title}</h1>
             <p className="text-gray-500 mb-8 text-lg">{project.description}</p>
 
-            <div className="relative aspect-video overflow-hidden rounded-xl mb-8 bg-[#1a1a1a] flex items-center justify-center">
+            <div className="relative aspect-video overflow-hidden rounded-xl mb-8 flex items-center justify-center">
               <Image
                 src={project.imageUrl || "/placeholder.svg"}
                 alt={project.title}

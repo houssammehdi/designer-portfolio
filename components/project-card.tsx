@@ -13,6 +13,7 @@ interface ProjectCardProps {
   isInternal?: boolean
   className?: string
   imageClassName?: string
+  objectFit?: "cover" | "contain"
 }
 
 export function ProjectCard({
@@ -23,6 +24,7 @@ export function ProjectCard({
   isInternal = false,
   className,
   imageClassName,
+  objectFit = "cover",
 }: ProjectCardProps) {
   const CardWrapper = link ? (isInternal ? Link : "a") : "div"
   const wrapperProps = link
@@ -34,12 +36,17 @@ export function ProjectCard({
   return (
     <CardWrapper {...wrapperProps} className={cn("group cursor-pointer overflow-hidden rounded-lg", className)}>
       <Card className="border-0 overflow-hidden">
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className={cn("relative overflow-hidden", objectFit === "contain" ? "aspect-square" : "aspect-[4/3]")}>
           <Image
             src={imageUrl || "/placeholder.svg"}
             alt={title}
             fill
-            className={cn("object-cover transition-transform duration-300 group-hover:scale-105", imageClassName)}
+            className={cn(
+              objectFit === "contain"
+                ? "object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                : "object-cover transition-transform duration-300 group-hover:scale-105",
+              imageClassName,
+            )}
           />
           {link && !isInternal && (
             <div className="absolute top-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">

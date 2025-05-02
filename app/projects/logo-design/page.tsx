@@ -33,6 +33,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/jupiter-logo.jpeg"
             link="/project/jupiter"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="Silverstein Cakes"
@@ -40,6 +42,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/silverstein-cakes-logo.jpeg"
             link="/project/silverstein-cakes"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="PineLand"
@@ -47,6 +51,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/pineland-logo.jpeg"
             link="/project/pineland"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="All Star Apparel"
@@ -54,6 +60,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/all-star-apparel-logo.jpeg"
             link="/project/all-star-apparel"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="Amaken"
@@ -61,6 +69,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/amaken-logo.jpeg"
             link="/project/amaken"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="Gitar Undervisning"
@@ -68,6 +78,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/gitar-undervisning-logo.jpeg"
             link="/project/gitar-undervisning"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="TechRivo"
@@ -75,6 +87,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/techrivo-logo.jpeg"
             link="/project/techrivo"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="Sheriff Dickles"
@@ -82,6 +96,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/sheriff-dickles-logo.jpeg"
             link="/project/sheriff-dickles"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="TwoAeon"
@@ -89,6 +105,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/twoaeon-logo.jpeg"
             link="/project/twoaeon"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="Mimou Bikini"
@@ -96,6 +114,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/mimou.png"
             link="/project/mimou-bikini"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
           <ProjectCard
             title="Fount Energy"
@@ -103,6 +123,8 @@ export default function LogoDesignProjectsPage() {
             imageUrl="/images/fount.png"
             link="/project/fount-energy"
             isInternal={true}
+            objectFit="contain"
+            className="bg-white"
           />
         </div>
       </div>
