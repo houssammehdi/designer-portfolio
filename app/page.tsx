@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Mail } from "lucide-react"
+import Script from "next/script"
 
 import { Button } from "@/components/ui/button"
 import { ServiceCard } from "@/components/service-card"
@@ -8,6 +9,7 @@ import { ContactForm } from "@/components/contact-form"
 import { SocialLinks } from "@/components/social-links"
 import { VideoHero } from "@/components/video-hero"
 import { ProjectCarousel } from "@/components/project-carousel"
+import { generatePortfolioPersonSchema, generateLocalBusinessSchema } from "@/components/structured-data"
 
 export default function Home() {
   // Define projects for the carousel
@@ -77,8 +79,21 @@ export default function Home() {
     },
   ]
 
+  const personSchema = generatePortfolioPersonSchema()
+  const businessSchema = generateLocalBusinessSchema()
+
   return (
     <div className="min-h-screen bg-white">
+      <Script
+        id="schema-person"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <Script
+        id="schema-business"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-20 md:py-32">
@@ -182,7 +197,7 @@ export default function Home() {
               <div className="relative aspect-square overflow-hidden rounded-xl">
                 <Image
                   src="/images/hassan-illustration.jpeg"
-                  alt="Hassan Fakhreddine Illustration"
+                  alt="Hassan Fakhreddine - Visual Designer Portrait Illustration"
                   fill
                   className="object-cover"
                   priority

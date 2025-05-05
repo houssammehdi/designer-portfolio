@@ -2,9 +2,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ExternalLink } from "lucide-react"
 import type { Metadata } from "next"
+import Script from "next/script"
 
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import { generateProjectSchema, generateBreadcrumbSchema } from "@/components/structured-data"
 
 // This would typically come from a CMS or database
 const getProjectData = (slug: string) => {
@@ -213,6 +215,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     )
   }
 
+  // Generate structured data
+  const projectSchema = generateProjectSchema(project)
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Projects", url: "/projects" },
+    { name: project.title, url: `/project/${params.slug}` },
+  ])
+
   // Special case for CXG project
   // For CXG project, remove the 2 image boxes and testimonial
   // Find the section for CXG (around line 450-550)
@@ -221,6 +231,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (params.slug === "cxg") {
     return (
       <div className="min-h-screen bg-white pt-20">
+        <Script
+          id="schema-project"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+        />
+        <Script
+          id="schema-breadcrumb"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
         <div className="container px-4 md:px-6 py-12">
           <Button variant="ghost" asChild className="mb-8">
             <Link href="/projects">
@@ -315,6 +335,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (params.slug === "momentum-trading") {
     return (
       <div className="min-h-screen bg-white pt-20">
+        <Script
+          id="schema-project"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+        />
+        <Script
+          id="schema-breadcrumb"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
         <div className="container px-4 md:px-6 py-12">
           <Button variant="ghost" asChild className="mb-8">
             <Link href="/projects">
@@ -406,6 +436,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (params.slug === "mimou-bikini") {
     return (
       <div className="min-h-screen bg-white pt-20">
+        <Script
+          id="schema-project"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+        />
+        <Script
+          id="schema-breadcrumb"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
         <div className="container px-4 md:px-6 py-12">
           <Button variant="ghost" asChild className="mb-8">
             <Link href="/projects">
@@ -525,6 +565,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   if (params.slug === "goose-valley") {
     return (
       <div className="min-h-screen bg-white pt-20">
+        <Script
+          id="schema-project"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+        />
+        <Script
+          id="schema-breadcrumb"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
         <div className="container px-4 md:px-6 py-12">
           <Button variant="ghost" asChild className="mb-8">
             <Link href="/projects">
@@ -642,6 +692,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="min-h-screen bg-white pt-20">
+      <Script
+        id="schema-project"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+      />
+      <Script
+        id="schema-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="container px-4 md:px-6 py-12">
         <Button variant="ghost" asChild className="mb-8">
           <Link href="/projects">
