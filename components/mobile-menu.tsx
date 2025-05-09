@@ -6,6 +6,7 @@ import { Menu, ChevronDown, ChevronRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { SocialLinks } from "@/components/social-links"
 
 // Replace the entire component with this updated version
 export function MobileMenu({ isHomePage }: { isHomePage: boolean }) {
@@ -26,6 +27,7 @@ export function MobileMenu({ isHomePage }: { isHomePage: boolean }) {
     { name: "Brand Identity", path: "/projects/brand-identity" },
     { name: "Logo Design", path: "/projects/logo-design" },
     { name: "Page Layout Design", path: "/projects/page-layout" },
+    { name: "Social Media", path: "/projects/social-media" },
     { name: "Clients", path: "/projects/clients" },
     { name: "Photography", path: "/projects/photography" },
     { name: "View All", path: "/projects" },
@@ -118,6 +120,10 @@ export function MobileMenu({ isHomePage }: { isHomePage: boolean }) {
               </Link>
             </>
           )}
+          <div className="mt-6 pt-6 border-t border-gray-100">
+            <p className="text-sm text-gray-500 mb-3">Follow me</p>
+            <SocialLinks variant="footer" />
+          </div>
         </nav>
       </SheetContent>
     </Sheet>
